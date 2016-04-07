@@ -161,6 +161,13 @@ h3 {
     padding: 0;
 }
 
+.box-full {
+    width: 96%;
+    float: left;
+    margin: 0 2%;
+    padding: 0;
+}
+
 .box-right:after {
     visibility: hidden;
     display: block;
