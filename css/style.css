@@ -3,12 +3,11 @@
     --accent-color: #E6381D;
     --dark-grey: #3b494d;
     --light-grey: #d8e6ea;
-    --content-width: 80%;
-    --header-height: 120px;
+    --content-width: 90%;
     --headline-font: Helvetica, Calibri, Arial, Sans-Serif;
     --text-font: Helvetica, Calibri, Arial, Sans-Serif;
     --profile-width: 120px;
-    --profile-height: 150px;
+    --profile-height: 160px;
     --shadow: 0 0 20px 0px rgba(2, 2, 2, .5);
     --page-margin: 50px;
 }
@@ -24,7 +23,7 @@ html, body {
 }
 
 .page {
-    margin: var(--page-margin) auto var(--page-margin);
+    margin: var(--page-margin) auto;
     padding: 0;
     width: var(--content-width);
     box-shadow: var(--shadow);
@@ -32,11 +31,40 @@ html, body {
 
 .header {
     width: 100%;
-    min-height: var(--header-height);
+    min-height: 120px;
     margin: 50px auto 0;
     background: var(--base-color);
     padding: 50px 0 100px 0;
     position: relative;
+    border-bottom: 5px solid var(--dark-grey);
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0 40px 0;
+    background: white;
+    border-top: 5px solid var(--dark-grey);
+    border-bottom: 5px solid var(--base-color);
+}
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background: var(--dark-grey);
+    color: var(--light-grey);
+    padding: 1% 0;
+    border-top: 5px solid var(--base-color);
+}
+
+.profile {
+    width: var(--profile-width);
+    height: var(--profile-height);
+    margin: calc(var(--profile-height) * -1 / 2) auto calc(var(--profile-height) * -1 / 2);
+    background: url(../img/portrait.jpg) no-repeat;
+    background-size: var(--profile-width) var(--profile-height);
+    position: relative;
+    box-shadow: var(--shadow);
 }
 
 .header:hover h1 {
@@ -71,25 +99,6 @@ h3 {
     font-size: 1.5rem;
     padding: 0;
     margin: 0 20px 0 0;
-}
-
-.profile {
-    width: var(--profile-width);
-    height: var(--profile-height);
-    margin: calc(var(--profile-height) * -1 / 2) auto calc(var(--profile-height) * -1 / 2);
-    background: url(../img/portrait.jpg) no-repeat;
-    background-size: 120px 150px;
-    position: relative;
-    border: 3px solid var(--light-grey);
-    box-sizing: border-box;
-    box-shadow: var(--shadow);
-}
-
-.content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px 0 40px 0;
-    background: white;
 }
 
 .content-left {
@@ -151,16 +160,8 @@ h3 {
     height: 0;
 }
 
-.footer {
-    width: 100%;
-    margin: 0 auto;
-    background: var(--dark-grey);
-    color: var(--light-grey);
-    padding: 1% 0;
-}
-
 .footer-text {
-    margin: 0 5%;
+    margin: 0 1%;
     text-align: right;
 }
 
@@ -196,12 +197,12 @@ a {
 @media (max-width: 820px) {
 
     .page {
-        width : 100%;
-        margin: 0 auto 0;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .header {
-        margin: 0 auto 0;
+        margin: 0 auto;
     }
 
     .content-left {
@@ -211,7 +212,7 @@ a {
     .content-right {
         width: 100%;
     }
-    
+
     .highlight {
         display: none;
     }
