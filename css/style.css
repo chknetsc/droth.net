@@ -2,7 +2,7 @@
     --base-color: #16748F;
     --accent-color: #E6381D;
     --dark-grey: #3b494d;
-    --light-grey: #d8e6ea;
+    --light-grey: #e4f2f6;
     --content-width: 90%;
     --headline-font: Helvetica, Calibri, Arial, Sans-Serif;
     --text-font: Helvetica, Calibri, Arial, Sans-Serif;
@@ -203,7 +203,6 @@ h3 {
 
 a:hover {
     color: var(--accent-color);
-    text-decoration: line-through;
 }
 
 a {
