@@ -189,6 +189,11 @@ a {
 
     .header {
         margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .footer {
+        border-radius: 0;
     }
 
     .content-left {
@@ -198,5 +203,7 @@ a {
     .content-right {
         width: 100%;
     }
+
+
 
 }
