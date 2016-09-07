@@ -1,92 +1,28 @@
-:root {
-    --base-color: #16748F;
-    --accent-color: #E6381D;
-    --dark-grey: #3b494d;
-    --light-grey: #e4f2f6;
-    --content-width: 90%;
-    --headline-font: Helvetica, Calibri, Arial, Sans-Serif;
-    --text-font: Helvetica, Calibri, Arial, Sans-Serif;
-    --profile-width: 120px;
-    --profile-height: 160px;
-    --shadow: 0 0 20px 0px rgba(2, 2, 2, .5);
-    --page-margin: 50px;
-}
-
 html, body {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background: var(--light-grey);
-    font-family: var(--text-font);
-    font-size: 1.1rem;
+    font-family: Helvetica, Calibri, Arial, sans-serif;
 }
 
-.page {
-    margin: var(--page-margin) auto;
-    padding: 0;
-    width: var(--content-width);
-    box-shadow: var(--shadow);
-}
-
-.header {
-    width: 100%;
-    min-height: 120px;
-    margin: 50px auto 0;
-    background: var(--base-color);
-    padding: 50px 0 100px 0;
-    position: relative;
-    border-bottom: 5px solid var(--dark-grey);
-}
-
-.content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 100px 0 40px 0;
-    background: white;
-    border-top: 5px solid var(--dark-grey);
-    border-bottom: 5px solid var(--base-color);
-}
-
-.footer {
-    width: 100%;
-    margin: 0 auto;
-    background: var(--dark-grey);
-    color: var(--light-grey);
-    padding: 1% 0;
-    border-top: 5px solid var(--base-color);
-}
-
-.profile {
-    width: var(--profile-width);
-    height: var(--profile-height);
-    margin: calc(var(--profile-height) * -1 / 2) auto calc(var(--profile-height) * -1 / 2);
-    background: url(../img/portrait.jpg) no-repeat;
-    background-size: var(--profile-width) var(--profile-height);
-    position: relative;
-    box-shadow: var(--shadow);
-}
-
-.header:hover h1 {
-    color: var(--accent-color);
-}
-
-.footer:hover .footer-text {
-    color: var(--accent-color);
+body {
+    background: url('../img/page_background.jpg') no-repeat fixed 50% 50%;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
 }
 
 h1 {
     text-align: center;
-    color: white;
-    font-family: var(--headline-font);
+    color: whitesmoke;
     font-size: 3rem;
     margin: 0;
 }
 
 h2 {
     text-align: center;
-    color: var(--light-grey);
-    font-family: var(--headline-font);
+    color: lightgrey;
     font-size: 1.5rem;
     padding: 0;
     margin: 0;
@@ -94,11 +30,54 @@ h2 {
 
 h3 {
     text-align: right;
-    color: var(--accent-color);
-    font-family: var(--headline-font);
+    color: #555;
     font-size: 1.5rem;
     padding: 0;
     margin: 0 20px 0 0;
+}
+
+.page {
+    margin: 10px auto;
+    width: 90%;
+}
+
+.header {
+    width: 100%;
+    min-height: 120px;
+    margin: 50px auto 0;
+    padding: 50px 0 100px 0;
+    position: relative;
+    background: rgba(100, 100, 100, .7);
+    border-radius: 15px 15px 0 0;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0 40px 0;
+    background: rgba(200, 200, 200, .7);
+    border-top: 5px solid rgba(22, 116, 143, .7);
+    border-bottom: 5px solid rgba(22, 116, 143, .7);
+}
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(100, 100, 100, .7);
+    color: #e4f2f6;
+    padding: 1% 0;
+    border-radius: 0 0 15px 15px;
+
+}
+
+.profile {
+    width: 120px;
+    height: 160px;
+    margin: -80px auto -80px;
+    background: url(../img/portrait.jpg) no-repeat;
+    background-size: 120px 160px;
+    position: relative;
+    box-shadow: 0 0 20px 0 rgba(80, 80, 80, .7);
 }
 
 .content-left {
@@ -118,11 +97,12 @@ h3 {
 .box {
     width: 94%;
     margin-left: 2%;
-    background: white;
+    background: whitesmoke;
     margin-bottom: 50px;
     padding: 20px 1% 30px;
     display: inline-block;
-    box-shadow: var(--shadow);
+    box-shadow: 0 0 20px 0 rgba(80, 80, 80, .7);
+    border-radius: 3px;
 }
 
 .box-list {
@@ -136,15 +116,15 @@ h3 {
     width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
-    border-top: 1px dotted var(--light-grey);
+    border-top: 1px dotted #ccc;
 }
 
 .box-list li:last-child {
-    border-bottom: 1px dotted var(--light-grey);
+    border-bottom: 1px dotted #ccc;
 }
 
 .box-list li:hover {
-    background: var(--light-grey);
+    background: rgba(22, 116, 143, .3);
 }
 
 .box-left {
@@ -191,18 +171,8 @@ h3 {
     height: 0;
 }
 
-.highlight:after {
-    position: fixed;
-    content: '\02764';
-    color: var(--accent-color);
-    font-size: 1rem;
-    bottom: 6px;
-    right: 5px;
-    visibility: visible;
-}
-
 a:hover {
-    color: var(--accent-color);
+    color: rgb(33, 86, 93);
 }
 
 a {
@@ -229,7 +199,4 @@ a {
         width: 100%;
     }
 
-    .highlight {
-        display: none;
-    }
 }
