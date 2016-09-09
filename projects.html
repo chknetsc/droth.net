@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tobias Droth</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Tobias Droth, Master's student in Computer Science at HTWG Konstanz">
+    <meta name="keywords"
+          content="Tobias, Droth, HTWG, Konstanz, Bachelor of Science, Master of Science, B.Sc., M.Sc., Computer Science, Informatik">
+
+    <meta property="og:description" content="Tobias Droth, Master's student in Computer Science at HTWG Konstanz">
+    <meta property="og:title" content="Tobias Droth">
+    <meta property="og:site_name" content="Tobias Droth">
+    <meta property="og:url" content="http://droth.net/">
+
+    <meta name="theme-color" content="#16748F">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<div class="page">
+
+    <div class="header">
+        <h1>Tobias Droth</h1>
+        <h2>Side Projects</h2>
+    </div>
+
+    <div class="profile"></div>
+
+    <div class="content clearfix">
+
+        <div class="content-left">
+
+            <div class="box">
+                <h3>spotifypi</h3>
+
+                <ul class="box-list">
+                    <li class="clearfix box-list-item">
+                        <div class="box-full">
+
+                            <p><strong>spotifypi</strong> is an application I built for the Raspberry Pi to stream music on my stereo and control it with any device in my local network. The name is a composition of the words <strong>Spotify</strong> and <strong>Raspberry Pi</strong>.</p>
+                            <p>When I ordered my Raspberry Pi, which was the very first model on the market, I was very excited about it. But as soon as I had it at home, I did not really have any great ideas what to do with it. One day I thought, it would be awesome to be able to stream music from Spotify directly to my stereo without plugging my smartphone in. After some googling around I did not find any application that did everything I wanted it to do, so I decided to implement it by myself.</p>
+                            <p>Spotify provided an API that allows you to search for music, access the meta data and stream it. The API could be accessed in <strong>C</strong>, so most of spotifypi is written in C.</p>
+                            <p>The most important part for me was the easy access from any device. My initial thought was to build an app for my smartphone to connect with the Raspberry Pi. But because we have Android-, iOS- and Windows devices in our home, I decided to connect to the Raspberry Pi via one very common interface which is installed on every relevant device: the web browser.</p>
+                            <p>So when the Raspberry Pi boots up, it starts an <strong>Apache HTTP Server</strong> running <strong>PHP</strong>, and it starts the C-program I wrote that accesses the Spotify API. When I navigate to the IP address of the Raspberry Pi, I get the website that you can see in the picture below. There you can search for songs or artists, play and pause songs, navigate forwards and backwards and toggle shuffle mode.</p>
+                            <p>What happens when I pick a song on my smartphone? &ndash; The browser performs an <strong>AJAX</strong> call to the <strong>REST API</strong> provided by the server. The server communicates with the C-program, which accesses the Spotify API, streams the song you picked and plays it through the sound output of the Raspberry Pi.</p>
+                            <p>I used this system almost every day, until Spotify decided to discontinue their API, so unfortunately this program is deprecated today.</p>
+
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-left">
+                            Languages
+                        </div>
+                        <div class="box-right">
+                            <div class="innerbox-left">C</div>
+                            <div class="innerbox-right">(80%)</div>
+                            <div class="innerbox-left">JavaScript</div>
+                            <div class="innerbox-right">(14%)</div>
+                            <div class="innerbox-left">PHP</div>
+                            <div class="innerbox-right">(5%)</div>
+                            <div class="innerbox-left">HTML, CSS</div>
+                            <div class="innerbox-right">(1%)</div>
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-full">
+                            <img src="img/spotifypi_small.png" class="centered" width="300" height="533">
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-left">Source Code</div>
+                        <div class="box-right"><a href="https://github.com/todroth/spotifypi">github.com/todroth/spotifypi</a></div>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="content-right">
+
+            <div class="box">
+                <h3>2048</h3>
+                <ul class="box-list">
+                    <li class="clearfix box-list-item">
+                        <div class="box-full">
+                            <p><strong>2048</strong> is a well-known game which is implemented on various websites and apps. The goal is, to slide the tiles until you get to a tile with the value 2048 on it. When you slide horizontally or vertically, tiles with the same value on it will add up to one tile.</p>
+                            <p>Initially that game was a project for the course Modern Programming Languages in university. The game is written in <strong>Scala</strong>, which is a <strong>functional programming language</strong> that compiles into bytecode for the Java Virtual Machine. For the server side it uses the <strong>Play Framework</strong> which is a very modern and easy-to-use framework for Scala or Java, that allows you to set up a HTTP server with a nice <strong>REST API</strong>.</p>
+                            <p>Under the hood, there is a strict <strong>Model-View-Controller (MVC)</strong> architecture. With that architecture, it is very easy to run multiple user interfaces in parallel. So when starting up the game, it opens a web UI in the web browser, a graphical desktop UI implemented with <strong>ScalaFX</strong> and a textual UI in the server's console. Moves can be performed in all of the UIs, its results will be propagated to the other UIs.</p>
+                            <p>The game and its web UI is deployed on <strong>Heroku</strong>, so have a look at <a href="https://play-2048.herokuapp.com/">play-2048.herokuapp.com</a>!</p>
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-left">
+                            Languages
+                        </div>
+                        <div class="box-right">
+                            <div class="innerbox-left">Scala</div>
+                            <div class="innerbox-right">(65%)</div>
+                            <div class="innerbox-left">JavaScript</div>
+                            <div class="innerbox-right">(22%)</div>
+                            <div class="innerbox-left">CSS</div>
+                            <div class="innerbox-right">(9%)</div>
+                            <div class="innerbox-left">HTML</div>
+                            <div class="innerbox-right">(4%)</div>
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-full">
+                            <img src="img/2048_small.png" class="centered" width="300" height="448">
+                        </div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-left">Source Code</div>
+                        <div class="box-right"><a href="https://github.com/todroth/HTWG-Exercise-MPL-2048-Play-Framework">github.com/todroth/HTWG-Exercise-MPL-2048-Play-Framework</a></div>
+                    </li>
+                    <li class="clearfix box-list-item">
+                        <div class="box-left">Play online</div>
+                        <div class="box-right"><a href="https://play-2048.herokuapp.com/">play-2048.herokuapp.com</a></div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer-text">
+            Feel free to contact me! &#x1F44D;
+        </div>
+    </div>
+
+</div>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-83789955-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+<link rel="stylesheet" href="css/octicons.css">

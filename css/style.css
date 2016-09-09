@@ -103,6 +103,7 @@ h3 {
     display: inline-block;
     box-shadow: 0 0 20px 0 rgba(80, 80, 80, .7);
     border-radius: 3px;
+    line-height: 150%;
 }
 
 .box-list {
@@ -112,18 +113,18 @@ h3 {
     padding: 0;
 }
 
-.box-list li {
+.box-list-item {
     width: 100%;
     padding-top: 7px;
     padding-bottom: 7px;
     border-top: 1px dotted #ccc;
 }
 
-.box-list li:last-child {
+.box-list-item:last-child {
     border-bottom: 1px dotted #ccc;
 }
 
-.box-list li:hover {
+.box-list-item:hover {
     background: rgba(22, 116, 143, .3);
 }
 
@@ -138,6 +139,20 @@ h3 {
     width: 68%;
     float: right;
     margin: 0 2%;
+    padding: 0;
+}
+
+.innerbox-left {
+    width: 30%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.innerbox-right {
+    width: 62%;
+    float: right;
+    margin: 0;
     padding: 0;
 }
 
@@ -169,6 +184,12 @@ h3 {
     content: " ";
     clear: both;
     height: 0;
+}
+
+.centered {
+    margin: 10px auto;
+    display:block;
+    box-shadow: 0 0 20px 0 rgba(80, 80, 80, .7);
 }
 
 a:hover {
