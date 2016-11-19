@@ -37,7 +37,7 @@ h1 {
     background: #17375e;
     display: inline-block;
     color: white;
-    padding: 0.2rem 0.8rem 0.2rem 40%;
+    padding: 0.2rem 0.8rem 0.2rem 33%;
 }
 
 @media(max-width: 55rem) {
