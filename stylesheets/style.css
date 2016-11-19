@@ -27,7 +27,26 @@ header {
 
 header ul {
     list-style-type: none;
-    margin-left: 10%;
+    margin-left: 30%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: normal;
+    background: #17375e;
+    display: inline-block;
+    color: white;
+    padding: 0.2rem 0.8rem 0.2rem 40%;
+}
+
+@media(max-width: 55rem) {
+    header ul {
+        margin-left: 10%;
+    }
+    h1 {
+        padding-left: 20%;
+    }
 }
 
 header span {
@@ -81,16 +100,6 @@ span.single {
     margin-left: 1rem;
     display: inline-block;
     vertical-align: text-top;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-family: "Century Gothic", sans-serif;
-    font-weight: normal;
-    background: #17375e;
-    display: inline-block;
-    color: white;
-    padding: 0.2rem 0.8rem 0.2rem 20%;
 }
 
 h2 {
