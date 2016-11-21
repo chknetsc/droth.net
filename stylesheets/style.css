@@ -1,18 +1,17 @@
 html {
     font-family: Calibri, sans-serif;
-    font-size: 100% !important;
+    font-size: 100%;
+}
+
+/* bigger text on bigger screens */
+@media (min-width: 120rem) {
+    html {
+        font-size: 120%;
+    }
 }
 
 html, body {
     width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #222;
     margin: 0;
     padding: 0;
 }
@@ -25,9 +24,30 @@ header {
     margin-top: 1rem;
 }
 
-header ul {
-    list-style-type: none;
-    margin-left: 30%;
+main {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.5;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+p {
+    margin: 0;
+}
+
+header table {
+    margin-left: 35%;
+    font-size: 1.2rem;
+}
+
+td:first-of-type {
+    color: white;
+    padding-right: 1em;
 }
 
 h1 {
@@ -37,69 +57,7 @@ h1 {
     background: #17375e;
     display: inline-block;
     color: white;
-    padding: 0.2rem 0.8rem 0.2rem 33%;
-}
-
-@media(max-width: 55rem) {
-    header ul {
-        margin-left: 10%;
-    }
-    h1 {
-        padding-left: 20%;
-    }
-}
-
-header span {
-    font-size: 1.2rem;
-}
-
-header span.left {
-    color: white;
-    width: 6rem;
-}
-
-@media(max-width: 43rem) {
-    header {
-        background: linear-gradient(to right, #8b8b8b, #ccc);
-    }
-}
-
-main {
-    max-width: 40rem;
-    margin: 0 auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    line-height: 1.5;
-}
-
-footer {
-    font-size: 0.8rem;
-    margin: 1rem;
-}
-
-section {
-    margin-bottom: 3rem;
-}
-
-span.left {
-    display: inline-block;
-    width: 8rem;
-    margin-left: 1rem;
-    color: #616161;
-    vertical-align: text-top;
-}
-
-span.right {
-    display: inline-block;
-    margin-left: 2rem;
-    max-width: 50rem;
-    vertical-align: text-top;
-}
-
-span.single {
-    margin-left: 1rem;
-    display: inline-block;
-    vertical-align: text-top;
+    padding: 0.2rem 0.8rem 0.2rem 35%;
 }
 
 h2 {
@@ -117,19 +75,53 @@ h3 {
     margin: 0;
 }
 
-h3 span {
-    display: block;
-    font-size: 0.8rem;
-    color: #616161;
+/* move header information and headline to the left on narrow screen */
+@media(max-width: 55rem) {
+    header table {
+        margin-left: 1rem;
+    }
+    h1 {
+        padding-left: 3rem;
+    }
 }
 
-ul {
+/* remove image on narrow screen */
+@media(max-width: 35rem) {
+    header {
+        background: linear-gradient(to right, #8b8b8b, #ccc);
+    }
+}
+
+main ul {
     margin-top: 0.5rem;
     list-style: square;
 }
 
-li {
-    margin-bottom: 0.3rem;
+main li {
+    margin-left: 1rem;
+}
+
+main li span:first-of-type {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+main li.two-cols span:first-of-type {
+    width: 8rem;
+    color: #616161;
+}
+
+main li.two-cols span:last-of-type {
+    display: inline-block;
+    margin-left: 2rem;
+    max-width: 50rem;
+}
+
+h3 span {
+    display: block;
+    font-size: 0.8rem;
+    color: #616161;
 }
 
 .visually-hidden {
@@ -138,12 +130,6 @@ li {
     height: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
-}
-
-.divider {
-    width: 100%;
-    height: 0.1rem;
-    background: #d9d9d9;
 }
 
 /* skip link */
@@ -157,27 +143,6 @@ li {
     right: auto;
 }
 
-/* automatic icons */
-[href^="http"]:not([href*="droth.net"])::after {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background: url('../images/external-icon.svg') no-repeat bottom;
-    background-size: 75% auto;
-    content: '(externer link)';
-    overflow: hidden;
-    white-space: nowrap;
-    text-indent: 1rem; /* the width of the icon */
-}
-
-
-/* bigger text on bigger screens */
-@media (min-width: 120rem) {
-    html {
-        font-size: 150%;
-    }
-}
-
 /* better link underline */
 .underline, section a {
     text-decoration: none;
@@ -189,7 +154,8 @@ li {
     background-size: 100% 0.05em;
 }
 
-section a:focus {
+/* visible focus link background */
+main a:focus {
     outline: none;
     background-color: #cef;
     text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
