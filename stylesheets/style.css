@@ -16,6 +16,10 @@ html, body {
     padding: 0;
 }
 
+a {
+    color: #17375e;
+}
+
 header {
     width: 100%;
     background: url("../images/tobias_droth.png") no-repeat right, linear-gradient(to right, #8b8b8b, #ccc);
@@ -143,8 +147,7 @@ h3 span {
     right: auto;
 }
 
-/* better link underlined */
-.underlined, main a {
+.underlined {
     text-decoration: none;
     text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
     0 0.05em 0 #fff, 0 -0.05em 0 #fff,
@@ -155,11 +158,8 @@ h3 span {
 }
 
 /* visible focus link background */
-main a:focus {
+a:focus {
     outline: none;
-    background-color: #cef;
-    text-shadow: 0.05em 0 0 #cef, -0.05em 0 0 #cef,
-    0 0.05em 0 #cef, 0 -0.05em 0 #cef,
-    0.1em 0 0 #cef, -0.1em 0 0 #cef,
-    0 0.1em 0 #cef, 0 -0.1em 0 #cef;
+    background-color: #17375e;
+    color: white;
 }
