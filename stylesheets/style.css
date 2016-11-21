@@ -143,8 +143,8 @@ h3 span {
     right: auto;
 }
 
-/* better link underline */
-.underline, section a {
+/* better link underlined */
+.underlined, main a {
     text-decoration: none;
     text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
     0 0.05em 0 #fff, 0 -0.05em 0 #fff,
