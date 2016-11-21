@@ -107,12 +107,12 @@ main li span:first-of-type {
     vertical-align: text-top;
 }
 
-main li.two-cols span:first-of-type {
+main ul.two-cols li span:first-of-type {
     width: 8rem;
     color: #616161;
 }
 
-main li.two-cols span:last-of-type {
+main ul.two-cols li span:last-of-type {
     display: inline-block;
     margin-left: 2rem;
     max-width: 50rem;
